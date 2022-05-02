@@ -1,13 +1,13 @@
 <?php
 
+use PhpAmqpLib\Connection\AbstractConnection;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
 require_once __DIR__ . '/../bootstrap.php';
 
-/** @var AMQPStreamConnection $connection */
-
 // create a channel
+/** @var AMQPStreamConnection|AbstractConnection $connection */
 $channel = $connection->channel();
 
 // declare a queue
