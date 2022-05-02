@@ -11,3 +11,15 @@ $connection = new AMQPStreamConnection(
     'rabbitmq',
     'secret'
 );
+
+// create a channel
+$channel = $connection->channel();
+
+// declare a queue
+$channel->queue_declare(
+    'hello',
+    false,
+    false,
+    false,
+    false
+);

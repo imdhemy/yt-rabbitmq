@@ -1,22 +1,13 @@
 <?php
 
+use PhpAmqpLib\Channel\AbstractChannel;
 use PhpAmqpLib\Connection\AbstractConnection;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 require_once __DIR__ . '/../bootstrap.php';
 
-// create a channel
+/** @var AMQPChannel|AbstractChannel $channel */
 /** @var AMQPStreamConnection|AbstractConnection $connection */
-$channel = $connection->channel();
-
-// declare a queue
-$channel->queue_declare(
-    'hello',
-    false,
-    false,
-    false,
-    false
-);
 
 echo " [*] Waiting for messages. To exit press CTRL+C\n";
 
