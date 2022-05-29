@@ -17,7 +17,7 @@ if (empty($data)) {
 }
 
 // Publish a message
-$msg = new AMQPMessage($data);
+$msg = new AMQPMessage($data, ['delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT]);
 $channel->basic_publish($msg, '', 'hello');
 
 // Print success message

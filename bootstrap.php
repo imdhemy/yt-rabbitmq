@@ -17,9 +17,12 @@ $channel = $connection->channel();
 
 // declare a queue
 $channel->queue_declare(
-    'hello',
+    'task_queue',
     false,
-    false,
+    true,
     false,
     false
 );
+
+// Fair dispatch
+$channel->basic_qos(null, 1, null);
