@@ -18,3 +18,14 @@ can find the source code on the "[02-work-queues](https://github.com/imdhemy/yt-
 - Message acknowledgment
 - Message durability
 - Fair dispatch
+
+**3. Publish/Subscribe**
+
+In this part we'll do something completely different -- we'll deliver a message to multiple consumers. This pattern is
+known as "publish/subscribe".
+
+- A _producer_ is a user application that _sends_ messages.
+- A _queue_ is a buffer that _stores_ messages.
+- A _consumer_ is a user application that _receives_ messages.
+- An _exchange_ receives messages from producers on one side and the other side it pushes them to queues.
+- _Exchange types:_ direct, topic, headers & fanout.
