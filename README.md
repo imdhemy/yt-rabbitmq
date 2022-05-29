@@ -22,7 +22,8 @@ can find the source code on the "[02-work-queues](https://github.com/imdhemy/yt-
 **3. Publish/Subscribe**
 
 In this part we'll do something completely different -- we'll deliver a message to multiple consumers. This pattern is
-known as "publish/subscribe".
+known as "publish/subscribe". You can find the code on the "[03-pub-sub branch](https://github.
+com/imdhemy/yt-rabbitmq/tree/03-pub-sub)"
 
 - A _producer_ is a user application that _sends_ messages.
 - A _queue_ is a buffer that _stores_ messages.
